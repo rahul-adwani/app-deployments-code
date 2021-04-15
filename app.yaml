@@ -9,4 +9,4 @@ resources:
     memory_gb: 6
     disk_size_gb: 10
 
-entrypoint: gunicorn app:app.server -b localhost:8000
+entrypoint: gunicorn app:app -b localhost:8000
