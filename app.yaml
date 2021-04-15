@@ -1,2 +1,6 @@
 ---
 runtime: python37
+env: flex
+entrypoint: gunicorn -b :$PORT flaskapp:app
+api_version: 1
+threadsafe: true
