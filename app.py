@@ -16,7 +16,7 @@ from datetime import datetime as dt
 
 
 # Creating the Layout
-app = dash.Dash()
+app = dash.Dash(__name__)
 app.title = "Stock Prices"
 app.layout = html.Div(children = [
     html.H1('Stock Visualisation Dashboard'),
