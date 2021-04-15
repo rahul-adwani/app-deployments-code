@@ -17,7 +17,7 @@ from datetime import datetime as dt
 
 # Creating the Layout
 app = dash.Dash(__name__)
-#app = app.server
+server = app.server
 app.title = "Stock Prices"
 app.layout = html.Div(children = [
     html.H1('Stock Visualisation Dashboard'),
@@ -43,9 +43,5 @@ def update_value(input_data):
                                         'layout':{'title':input_data}})
 
 
-# In[ ]:
-
-
 if __name__ == "__main__":
-    app.run_server(host='0.0.0.0', port=8081, debug=True)
-
+    app.run(host='0.0.0.0', port=8081, debug=True)
