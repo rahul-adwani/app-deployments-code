@@ -11,4 +11,4 @@ resources:
 manual_scaling:
     instances:2
 
-entrypoint: gunicorn app:main -b localhost:8000
+entrypoint: gunicorn -b localhost:8000 app:server
