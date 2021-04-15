@@ -6,7 +6,9 @@ runtime_config:
 
 resources:
     cpu: 1
-    memory_gb: 6
+    memory_gb: 3
     disk_size_gb: 10
+manual_scaling:
+    instances:2
 
-entrypoint: gunicorn main:app -b localhost:8000
+entrypoint: gunicorn app:main -b localhost:8000
