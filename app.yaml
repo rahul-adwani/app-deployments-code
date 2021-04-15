@@ -8,5 +8,5 @@ resources:
     cpu: 1
     memory_gb: 6
     disk_size_gb: 10
-                             
-entrypoint: gunicorn -b :$PORT app:app
+
+entrypoint: gunicorn app:app.server -b localhost:8000
