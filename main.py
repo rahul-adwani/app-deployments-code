@@ -22,8 +22,8 @@ app.title = "Stock Prices"
 app.layout = html.Div(children = [
     html.H1('Stock Visualisation Dashboard'),
     html.H4('Please enter the stock name'),
-    dcc.Input(id="input", value="", type="text"),
-    html.Div(id="output-graph")
+    dcc.Input(id='input', value='', type='text'),
+    html.Div(id='output-graph')
 ])
 
 
@@ -32,8 +32,8 @@ app.layout = html.Div(children = [
 
 # Creating User Interaction Handlers
 @app.callback(
-    Output(component_id="output-graph", component_property="children"),
-    [Input(component_id="input", component_property="value")]
+    Output(component_id='output-graph', component_property='children'),
+    [Input(component_id='input', component_property='value')]
 )
 def update_value(input_data):
     start_date = dt(2010, 1, 13)
@@ -43,5 +43,5 @@ def update_value(input_data):
                                         'layout':{'title':input_data}})
 
 
-if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=8081, debug=True)
+if __name__ == '__main__':
+    app.run_server(host='0.0.0.0', port=8080, debug=True, use_reloader=False)
