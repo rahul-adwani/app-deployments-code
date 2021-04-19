@@ -1,0 +1,4 @@
+---
+runtime: python37
+
+service: dashapp-rad-small-vxx
